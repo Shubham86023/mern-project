@@ -6,13 +6,14 @@ import { Link } from "react-router-dom";
 import Notify from "../Config/Notify";
 
 const Products = () => {
-
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [notifyMessage, setNotifyMessage] = useState("");
   const [notifyType, setNotifyType] = useState("");
 
-  useEffect(() => fetchData, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const fetchData = async () => {
     const response = await ProductService.GetProducts();
