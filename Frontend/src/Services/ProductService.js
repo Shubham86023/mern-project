@@ -16,7 +16,6 @@ const GetSingleProduct = async (uid) => {
 
     try{
         const response = await axios.get(`${API_BASE_URL}/${uid}`);
-        console.log("service",response);
         return response.data.data;
     }catch(error){
         console.error("Error while fetching product:", error);
