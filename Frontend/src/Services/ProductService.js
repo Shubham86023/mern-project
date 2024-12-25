@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const API_BASE_URL = `${process.env.BASE_URL}/product`;
+const API_BASE_URL = `/product`;
+
 const GetProducts = async () => {
-    console.log("API_BASE_URL", API_BASE_URL);
 
     try{
         const response = await axios.get(`${API_BASE_URL}`);
